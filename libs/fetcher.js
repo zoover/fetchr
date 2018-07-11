@@ -152,6 +152,7 @@ Request.prototype._captureMetaAndStats = function (errData, result) {
         var err = errData && errData.err;
         var stats = {
             resource: self.resource,
+            request: self.req,
             operation: self.operation,
             params: self._params,
             statusCode: err ? err.statusCode : (result && result.meta && result.meta.statusCode || 200),
